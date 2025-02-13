@@ -1,0 +1,221 @@
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root{
+  height: 100%;
+  width: 100%;
+}
+
+main{
+  height: 100%;
+  width: 100%;
+  padding: 2.5rem;
+  display:flex;
+  gap: 1rem;
+
+}
+.left .code, .code pre, .code pre code{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-color: rgb(23, 23, 24);
+  border-radius: 0.7rem;
+}
+
+/* // these are css written by me 
+ main .left .review{
+  position: absolute;
+  bottom: 1rem;
+  right:1rem;
+  padding: 0.5rem 1rem; 
+  background-color: rgba(240, 199, 199, 1);
+  color: black;
+  border-radius: 0.7rem;
+  font-size: 1rem;
+  display: flex;
+  cursor: pointer;
+  font-weight: 500;
+
+} */
+main .left .review {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  padding: 8px 16px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 4px 15px rgba(255, 65, 108, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Hover effect */
+main .left .review:hover {
+  background: linear-gradient(45deg, #ff4b2b, #ff416c);
+  box-shadow: 0 6px 20px rgba(255, 65, 108, 0.6);
+  transform: translateY(-3px);
+}
+
+/* Click effect */
+main .left .review:active {
+  transform: translateY(2px);
+}
+
+/* Glow effect */
+main .left .review::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: radial-gradient(circle, rgba(255, 75, 43, 0.5), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+main .left .review:hover::before {
+  opacity: 1;
+}
+
+ 
+/* main .right .clear-code{
+  position: absolute;
+  bottom: 1rem;
+  right:1rem;
+  padding: 0.5rem 1rem;
+  background-color: rgba(240, 199, 199, 1);
+  color: black;
+  border-radius: 0.7rem;
+  font-size: 1rem;
+  display: flex;
+  cursor: pointer;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+} */
+main .right .clear-code {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1.5rem;
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 4px 10px rgba(255, 75, 43, 0.3);
+}
+
+/* Hover Effect */
+main .right .clear-code:hover {
+  background: linear-gradient(135deg, #ff4b2b, #ff416c);
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(255, 75, 43, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  main .right .clear-code {
+    bottom: 0.5rem;
+    right: 0.5rem;
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  main .right .clear-code {
+    position: static;  /* Moves it to a natural flow */
+    width: 100%;
+    text-align: center;
+    font-size: 0.85rem;
+    padding: 0.6rem 0;
+  }
+}
+
+
+main .left , main .right{
+  height: 100%;
+  flex-basis: 50%;
+  border-radius: 0.7rem;
+}
+.left{
+  background-color: rgb(5, 5, 5);
+  position: relative;
+
+}
+main .right{
+
+  background-color: #363535;
+  padding: 1rem 2rem;
+  position: relative;
+  font-size: 1rem;
+  overflow:auto;
+}
+/* // for heading */
+.header {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/* Heading Styles */
+.heading {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glow 2s infinite alternate;
+}
+
+/* Subtle Glow Animation */
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px rgba(146, 118, 86, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 20px rgba(229, 46, 113, 0.7);
+  }
+}
+
+/* Hover Effect */
+.header:hover {
+  background: linear-gradient(135deg, #2c5364, #203a43, #0f2027);
+  transition:background 0.3s ease-in-out;
+}
